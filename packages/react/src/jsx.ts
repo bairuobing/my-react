@@ -28,7 +28,9 @@ const ReactElement = function (
 // react 17 之前，jsx 转换用的 React.createElement 方法，17 之后用的 _jsx 方法
 export const jsx = (type: ElementType, config: any, key: Key = null) => {
 	let ref: Ref = null;
-	const props: Props = null;
+	const props: Props = {
+		children: null
+	};
 
 	for (const prop in config) {
 		const val = config[prop];
